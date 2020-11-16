@@ -86,7 +86,7 @@
                 </executions>
             </plugin>
         </plugins>
-        <finalName>toDoAppWithLoginApp</finalName>
+        <finalName>toDoAppWithLogin</finalName>
     </build>
 
 </project>
