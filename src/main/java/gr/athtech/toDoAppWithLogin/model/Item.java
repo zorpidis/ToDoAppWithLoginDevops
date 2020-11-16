@@ -1,6 +1,7 @@
 package gr.athtech.toDoAppWithLogin.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
@@ -12,17 +13,18 @@ import java.util.Date;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String username;
+    private String description;
     private Date date_created;
 
-    public Item(String username) {
-        this.username = username;
+    public Item(String description) {
+        this.description = description;
         date_created = new Date();
     }
 }

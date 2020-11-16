@@ -8,7 +8,6 @@ import gr.athtech.toDoAppWithLogin.service.SessionService;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -60,9 +59,14 @@ public class MainController {
         return "redirect:/";
     }
 
-    @DeleteMapping("/item/delete")
+    @PostMapping("/item/delete")
     public String deleteItem(@RequestParam long id) {
         itemService.deleteItem(id);
         return "redirect:/";
+    }
+
+    @GetMapping("/item/find")
+    public String test() {
+        return "test";
     }
 }
